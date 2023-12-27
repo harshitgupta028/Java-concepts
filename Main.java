@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Stack;
 
@@ -156,8 +157,26 @@ class Main{
         // of list will work on it. syntax ->  List<Integer> queue = new LinkedList<>();
 
 
-        // 4. Priority queue
-        
+        // 4. Priority queue (internally it implements min heap which result the higest priority for samll element by default)
+
+        LearnPriorityQueue priorityQueueObj = new LearnPriorityQueue();
+
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+
+        priorityQueue.offer(90);
+        priorityQueue.offer(5);
+        priorityQueue.offer(33);
+        priorityQueue.offer(22);
+
+        priorityQueueObj.setNumber(priorityQueue);
+
+        System.out.println(priorityQueueObj.getNumber());
+
+        System.out.println(priorityQueueObj.getNumber().poll());
+        System.out.println(priorityQueueObj.getNumber());
+
+        System.out.println(priorityQueueObj.getNumber().peek());
+
 
 
 
