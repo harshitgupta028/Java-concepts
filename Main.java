@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Stack;
 
 import Abstract.InfosysEmployee;
@@ -126,6 +128,40 @@ class Main{
         //pop()
         animalObj.getAnimals().pop();
         System.out.println(animalObj.getAnimals());
+
+
+
+        // 3. Queue
+
+        LearnLinkedListQueue locationObj = new LearnLinkedListQueue();
+
+        Queue<String> location = new LinkedList<>();
+
+        location.offer("Pune");
+        location.offer("Mumbai");
+        location.offer("Karera");
+        location.offer("Jhansi");
+
+        locationObj.setLocations(location);
+
+        System.out.println(locationObj.getLocations());
+
+        // poll() or remove() -> throws exception in case of no data
+        System.out.println(locationObj.getLocations().poll());
+
+        // peek()
+        System.out.println(locationObj.getLocations().peek());
+
+        // We can also implement the Queue using the list and all the function
+        // of list will work on it. syntax ->  List<Integer> queue = new LinkedList<>();
+
+
+        // 4. Priority queue
+        
+
+
+
+
 
 
 
