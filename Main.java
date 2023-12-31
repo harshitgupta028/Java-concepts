@@ -1,5 +1,6 @@
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -213,7 +214,28 @@ class Main{
         System.out.println(adqObj.getDisk());
 
         
+        
+        // 6. Hash set
 
+        LearnHashSet hashSetObj = new LearnHashSet();
+
+        HashSet<Integer> hashSet = new HashSet<>();
+
+        hashSet.add(29);
+        hashSet.add(12);
+        hashSet.add(14);
+        hashSet.add(8);
+        hashSet.add(17);
+
+        hashSetObj.setUniqueDates(hashSet);
+        System.out.println(hashSetObj.getUniqueDates());
+
+        System.out.println(hashSetObj.getUniqueDates().remove(29));
+        System.out.println(hashSetObj.getUniqueDates().size());
+
+        hashSetObj.getUniqueDates().clear();
+
+        System.out.println(hashSetObj.getUniqueDates());
 
    
     }
