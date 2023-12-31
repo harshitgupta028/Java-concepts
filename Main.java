@@ -1,3 +1,4 @@
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -179,15 +180,41 @@ class Main{
 
 
 
+        // 5. Deque
 
+        LearnArrayDeque adqObj = new LearnArrayDeque();
 
+        ArrayDeque<Integer> deque = new ArrayDeque<>();
+        
 
+        // offer and offerLast works as same they add element from back
+        // offerFirst add element from front.
 
+        deque.offer(12);
+        deque.offer(44);
+        deque.offerFirst(1);
+        deque.offerLast(33);
+        deque.offer(100);
 
+        adqObj.setDisk(deque);
 
-       
+        System.out.println(adqObj.getDisk());
 
+        System.out.println(adqObj.getDisk().peek());
+        System.out.println(adqObj.getDisk().peekFirst());
+        System.out.println(adqObj.getDisk().peekLast());
+
+        System.out.println(adqObj.getDisk());
+
+        System.out.println(adqObj.getDisk().poll());
+        System.out.println(adqObj.getDisk().pollFirst());
+        System.out.println(adqObj.getDisk().pollLast());
+
+        System.out.println(adqObj.getDisk());
 
         
+
+
+   
     }
 }
