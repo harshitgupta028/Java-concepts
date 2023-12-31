@@ -1,6 +1,7 @@
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -237,6 +238,27 @@ class Main{
 
         System.out.println(hashSetObj.getUniqueDates());
 
-   
+
+        // LinkedHashSet - unique, and data is stored in ordered form
+
+        LearnLinkedHashSet linkedHashSetObj = new LearnLinkedHashSet();
+
+        LinkedHashSet<String> linkedHashSet = new LinkedHashSet<>();
+
+        linkedHashSet.add("Harshit");
+        linkedHashSet.add("Arun");
+        linkedHashSet.add("Harish");
+        linkedHashSet.add("Ayush");
+        linkedHashSet.add("Souvik");
+
+        linkedHashSetObj.setNames(linkedHashSet);
+        System.out.println(linkedHashSetObj.getNames());
+
+        System.out.println(linkedHashSetObj.getNames().remove("Aman"));
+        System.out.println(linkedHashSetObj.getNames().size());
+
+        linkedHashSetObj.getNames().clear();
+
+        System.out.println(linkedHashSetObj.getNames());
     }
 }
