@@ -1,9 +1,11 @@
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Stack;
@@ -332,6 +334,40 @@ class Main{
         System.out.println(student);
 
 
+        // 9. HashMap
+
+        LearnMap mapObj = new LearnMap();
+
+        Map<String, Integer> map = new HashMap<>();
+
+        map.put("One", 1);
+        map.put("Two", 2);
+        map.put("Three", 3);
+
+        mapObj.setNumber(map);
+
+        System.out.println(mapObj.getNumber());
+
+        // Iterate on MAP
+
+        for(Map.Entry<String, Integer> e: map.entrySet()){
+            System.out.println(e.getKey());
+            System.out.println(e.getValue());
+        }
+
+        for(String k : map.keySet()){
+            System.out.println(k);
+        }
+
+        for(Integer v : map.values()){
+            System.out.println(v);
+        }
+
+        System.out.println(mapObj.getNumber().containsKey("Two"));
+        System.out.println(mapObj.getNumber().containsValue(2));
+        System.out.println(mapObj.getNumber().isEmpty());
+
+        // 10. Tree map
         
     }
 }
