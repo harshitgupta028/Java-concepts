@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Stack;
+import java.util.TreeSet;
 
 import Abstract.InfosysEmployee;
 import Abstract.TCSEmployee;
@@ -239,7 +240,7 @@ class Main{
         System.out.println(hashSetObj.getUniqueDates());
 
 
-        // LinkedHashSet - unique, and data is stored in ordered form
+        // 7. LinkedHashSet - unique, and data is stored in ordered form
 
         LearnLinkedHashSet linkedHashSetObj = new LearnLinkedHashSet();
 
@@ -260,5 +261,77 @@ class Main{
         linkedHashSetObj.getNames().clear();
 
         System.out.println(linkedHashSetObj.getNames());
+
+
+        // 8. Tree set - Unique, ordered and in sorted order
+
+        // i General Implementation
+
+        // Example - 1
+
+        LearnTreeSet treeSetObj = new LearnTreeSet();
+
+        TreeSet<Integer> treeSet = new TreeSet<>();
+
+        treeSet.add(55);
+        treeSet.add(34);
+        treeSet.add(7);
+        treeSet.add(12);
+        treeSet.add(2);
+
+        treeSetObj.setRollNumber(treeSet);
+        System.out.println(treeSetObj.getRollNumber());
+
+        try {
+            System.out.println(treeSetObj.getRollNumber().remove("Aman"));
+        } catch (Exception e) {
+            System.out.println("remove() function returns exception if it does not able to delete the data");
+        }
+
+        System.out.println(treeSetObj.getRollNumber().size());
+
+        treeSetObj.getRollNumber().clear();
+
+        System.out.println(treeSetObj.getRollNumber());
+
+        // Example - 2
+
+        TreeSet<String> treeSetStr = new TreeSet<>();
+
+        treeSetStr.add("Harshit");
+        treeSetStr.add("Ayush");
+        treeSetStr.add("Kuljeet");
+        treeSetStr.add("Souvik");
+        treeSetStr.add("Rishi");
+
+        treeSetObj.setFriendsName(treeSetStr);
+
+        System.out.println(treeSetObj.getFriendsName());
+
+
+
+        // ii Creating tree set for non-primitive datatype
+
+        System.out.println("Tree set with non primitive datatype");
+
+        LearnTreeSetNonPrimitiveDataType studentObj = new LearnTreeSetNonPrimitiveDataType();
+
+        studentObj.setName("Harshit Gupta");
+        studentObj.setRollNum(44);
+
+        TreeSet<LearnTreeSetNonPrimitiveDataType> student = new TreeSet<>();
+
+        student.add(studentObj);
+        student.add(new LearnTreeSetNonPrimitiveDataType("Ayush Joshi", 34));
+        student.add(new LearnTreeSetNonPrimitiveDataType("Kuljeet Kaur", 54));
+        student.add(new LearnTreeSetNonPrimitiveDataType("Random Guy", 90));
+
+        // This will not add, compareTo() will not add this object because it has the rollNumber same as above.
+        student.add(new LearnTreeSetNonPrimitiveDataType("Random Guy", 90));
+
+        System.out.println(student);
+
+
+        
     }
 }
