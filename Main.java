@@ -1,5 +1,7 @@
+import java.lang.reflect.Array;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -11,6 +13,8 @@ import java.util.Queue;
 import java.util.Stack;
 import java.util.TreeMap;
 import java.util.TreeSet;
+
+import javax.sound.midi.Soundbank;
 
 import Abstract.InfosysEmployee;
 import Abstract.TCSEmployee;
@@ -394,6 +398,25 @@ class Main{
 
         // All functions wich works in Hash map will also work in Tree Map
 
+        // 11. Array class
+
+        LearnArrayClass arrayClassObj = new LearnArrayClass();
+
+        int[] arr = {2, 4, 5,64,7,8,4,254,6};
+
+        Arrays.sort(arr);
+
+        arrayClassObj.setNumbers(arr);
+
+        for (int i: arrayClassObj.getNumbers()) {
+            System.out.println(i);
+        }
+
+        System.out.println(Arrays.binarySearch(arr, 254));
+        Arrays.fill(arrayClassObj.getNumbers(), 12);
         
+        for (int i: arrayClassObj.getNumbers()) {
+            System.out.println(i);
+        }
     }
 }
