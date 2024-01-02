@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Stack;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 import Abstract.InfosysEmployee;
@@ -342,6 +343,7 @@ class Main{
 
         map.put("One", 1);
         map.put("Two", 2);
+        map.put("Five", 5);
         map.put("Three", 3);
 
         mapObj.setNumber(map);
@@ -367,7 +369,31 @@ class Main{
         System.out.println(mapObj.getNumber().containsValue(2));
         System.out.println(mapObj.getNumber().isEmpty());
 
+
+
         // 10. Tree map
+
+        // Example - 1
+
+        LearnTreeMap treeMapObj = new LearnTreeMap();
+
+        Map<String, Integer> numberMap = new TreeMap<>();
+
+        numberMap.put("One", 1);
+        numberMap.put("Two", 2);
+        numberMap.put("Three", 3);
+        numberMap.put("Four", 4);
+
+        treeMapObj.setNumberSeries(numberMap);
+
+        System.out.println(treeMapObj.getNumberSeries());
+
+        treeMapObj.getNumberSeries().remove("One");
+
+        System.out.println(treeMapObj.getNumberSeries());
+
+        // All functions wich works in Hash map will also work in Tree Map
+
         
     }
 }
