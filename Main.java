@@ -2,6 +2,9 @@ import java.lang.reflect.Array;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -418,5 +421,47 @@ class Main{
         for (int i: arrayClassObj.getNumbers()) {
             System.out.println(i);
         }
+
+
+        // 11 Collection class
+
+        LearnCollectionsClass collClassObj = new LearnCollectionsClass();
+
+        ArrayList<Integer> arrList = new ArrayList<>();
+
+        arrList.add(2);
+        arrList.add(11);
+        arrList.add(3);
+        arrList.add(2);
+        arrList.add(12);
+
+        collClassObj.setNum(arrList);
+
+        System.out.println(Collections.min(collClassObj.getNum()));
+        System.out.println(Collections.max(collClassObj.getNum()));
+        System.out.println(Collections.frequency(collClassObj.getNum(), 12 ) );
+
+
+
+        // Comparable concept
+
+        List<LearnComparable> students = new ArrayList<>();
+
+        students.add(new LearnComparable("Harashit", 44));
+        students.add(new LearnComparable("Ayush", 34));
+        students.add(new LearnComparable("Kuljeet", 54));
+        students.add(new LearnComparable("Souvik", 3));
+        students.add(new LearnComparable("Ayush k", 55));
+
+        Collections.sort(students, new Comparator<LearnComparable>() {
+
+            @Override
+            public int compare(LearnComparable o1, LearnComparable o2){
+                return o1.name.compareTo(o2.name);
+            }
+        });
+
+        System.out.println(students);
+
     }
 }
