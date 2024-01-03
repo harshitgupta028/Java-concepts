@@ -16,6 +16,8 @@ import java.util.Queue;
 import java.util.Stack;
 import java.util.TreeMap;
 import java.util.TreeSet;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 import javax.sound.midi.Soundbank;
 
@@ -462,6 +464,35 @@ class Main{
         });
 
         System.out.println(students);
+
+
+        // Stream Api functions and use.
+
+        LearnArrayList arrLisObj = new LearnArrayList();
+
+        List<Integer> lis = new ArrayList<>();
+
+        lis.add(1);
+        lis.add(3);
+        lis.add(76);
+        lis.add(55);
+        lis.add(12);
+        lis.add(14);
+        lis.add(2);
+
+        List<Integer> sortedLis = lis.stream()
+                                        .filter(n -> n%2==0)
+                                        .map(n -> n*2)
+                                        .sorted(Comparator.reverseOrder())
+                                        .collect(Collectors.toList());
+
+        Long arrSize = sortedLis.stream().count();
+
+        arrLisObj.setNum(sortedLis);
+        arrLisObj.setArraySize(arrSize);
+
+        System.out.println(arrLisObj.getNum());
+        System.out.println(arrLisObj.getArraySize());
 
     }
 }
