@@ -1,4 +1,4 @@
-package Questions.patterns;
+package Questions.starPatterns;
 
 public class StarPatterns {
     
