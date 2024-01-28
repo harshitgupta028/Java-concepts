@@ -18,5 +18,13 @@ public class Main {
 
         System.out.println(empOne.equals(empTwo));
 
+
+        // using hash code
+        int a = empOne.hashCode();
+        int b = empTwo.hashCode();
+
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(empOne.equals(empTwo));
     }
 }
