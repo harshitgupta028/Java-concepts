@@ -42,18 +42,12 @@ public class Solution {
                             matrixSum = matrixSum + arr.get(k).get(l);
                         }
                         innerCounter = innerCounter + 1;
-                        // System.out.print(arr.get(k).get(l));
                     }
                     outerCounter = outerCounter + 1;
-                    // System.out.println();
                 }
                 hourGlass.add(matrixSum);
-                // System.out.println();
             }
-            // System.out.println();
         }
-        
-        // System.out.println(hourGlass);
         
         int maxNum = hourGlass.get(0);
         
