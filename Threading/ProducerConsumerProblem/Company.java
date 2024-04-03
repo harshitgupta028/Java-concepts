@@ -5,6 +5,8 @@ public class Company {
     private int n;
     private boolean isProduced = false;
 
+    // establish communication b/w threads
+
     // if isProduced = false i.e. produce_item will run
     // if isProduced = true i.e. consume_item will run
     // In case of isProduced = false consume thread is executing we should make it wait() and notify()
