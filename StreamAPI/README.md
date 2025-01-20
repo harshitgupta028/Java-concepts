@@ -1,4 +1,39 @@
-# Stream API questions
+# Stream API
+
+Introduced in Java 8.
+
+## Stream Creation
+
+We can create the stream from various sources.
+
+1. From Collections
+2. From Arrays
+3. Using Stream API methods
+4. Infinite Stream
+
+## Intermediate Operations
+
+There are certain intermediate operations which can filter or transform stream
+
+1. `filter`: Filter element based on a condition.
+2. `map`: Transform element into another form.
+3. `flatMap`: Flatten nested condition into a single stream.
+4. `distinct`: Removes duplicates.
+5. `sorted`: Sort elements.
+6. `limit` and `skip`: Controll the size of a stream.
+
+## Terminal Operations
+
+These are the operations which are applied after the intermediate operations to consume or collect the result of streams
+
+1. `collect`: Gather elements into a collection (e.g.: `List`, `Set`, `Map`)
+2. `forEach`: performs the action on each element.
+3. `reduce`: Aggreate the elements into a single value.
+4. `count`: Count the number of elements.
+5. `toArray`: Convert the stream to an array.
+6. `anyMatch`, `allMatch` and `noneMatch`: Used to check if a given predicate matches any, all, or none of the elements in a stream
+
+## Stream API coding questions
 
 1. Given a list of integers, find out all the even numbers that exist in the list using Stream functions?
 2. Given a list of integers, find out all the numbers starting with 1 using Stream functions?
