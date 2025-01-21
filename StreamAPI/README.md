@@ -1,6 +1,7 @@
 # Stream API
 
 Introduced in Java 8.
+Streams are not a data structure its a pipeline on which we can perform certain operations
 
 ## Stream Creation
 
