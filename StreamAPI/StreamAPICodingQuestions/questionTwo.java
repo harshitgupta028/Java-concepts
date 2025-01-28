@@ -17,6 +17,8 @@ public class questionTwo {
         System.out.println(transformedData);
 
         // Two
-        list.stream().map(n -> n + "").filter(n -> n.startsWith("1")).forEach(n -> System.out.print(n + " "));
+        list.stream().map(n -> n + "")
+                .filter(n -> n.startsWith("1"))
+                .forEach(n -> System.out.print(n + " "));
     }
 }
