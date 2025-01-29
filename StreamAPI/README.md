@@ -21,9 +21,7 @@ There are certain intermediate operations which can filter or transform stream
 3. `flatMap`: Flatten nested condition into a single stream.
 4. `distinct`: Removes duplicates.
 5. `sorted`: Sort elements.
-6. `findFirst`: Gives the first element form the stream, returns the Optional.
-7. `ifPresent`: Used with optional, if data present provides the data to lambda expression otherwise provids the void.
-8. `limit` and `skip`: Controll the size of a stream.
+6. `limit` and `skip`: Controll the size of a stream.
 
 ## Terminal Operations
 
@@ -34,7 +32,9 @@ These are the operations which are applied after the intermediate operations to 
 3. `reduce`: Aggreate the elements into a single value.
 4. `count`: Count the number of elements.
 5. `toArray`: Convert the stream to an array.
-6. `anyMatch`, `allMatch` and `noneMatch`: Used to check if a given predicate matches any, all, or none of the elements in a stream
+6. `findFirst`: Gives the first element form the stream, returns the Optional.
+7. `ifPresent`: Used with optional, if data present provides the data to lambda expression otherwise provids the void.
+8. `anyMatch`, `allMatch` and `noneMatch`: Used to check if a given predicate matches any, all, or none of the elements in a stream
 
 ## Stream API coding questions
 
