@@ -21,7 +21,9 @@ There are certain intermediate operations which can filter or transform stream
 3. `flatMap`: Flatten nested condition into a single stream.
 4. `distinct`: Removes duplicates.
 5. `sorted`: Sort elements.
-6. `limit` and `skip`: Controll the size of a stream.
+6. `findFirst`: Gives the first element form the stream, returns the Optional.
+7. `ifPresent`: Used with optional, if data present provides the data to lambda expression otherwise provids the void.
+8. `limit` and `skip`: Controll the size of a stream.
 
 ## Terminal Operations
 
